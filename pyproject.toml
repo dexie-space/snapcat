@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "snapcat"
+version = "0.1.2"
+description = "snapcat is a Python command-line tool that helps monitor CATs (Chia Asset Tokens) on Chia Blockchain."
+authors = ["Dexie Contributors <pypi@dexie.space>"]
+readme = "README.md"
+packages = [{include = "snapcat", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rich-click = "^1.8.0"
+python-dotenv = "^1.0.1"
+asyncio = "^3.4.3"
+
+
+[tool.poetry.group.chia.dependencies]
+chia-blockchain = {version = "^2.3.0", allow-prereleases = true}
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.0"
+flake8 = "^7.0.0"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+snapcat = "snapcat:cli"
