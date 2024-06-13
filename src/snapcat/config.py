@@ -29,7 +29,6 @@ logging.basicConfig(
     level=loggin_level,
 )
 
-database_path = os.getenv("DB_SOURCE_DIR", ".")
 # CAT2 start height: 2,311,760
 start_height: int = int(os.getenv("START_HEIGHT", "0"))
 target_height: int = int(os.getenv("TARGET_HEIGHT", "-1"))

@@ -8,7 +8,6 @@ from typing import Optional
 
 from chia.types.blockchain_format.sized_bytes import bytes32
 
-import snapcat.config as Config
 from snapcat.shared import Bytes32ParamType
 
 log = logging.getLogger("snapcat")
@@ -74,8 +73,7 @@ def show(ctx, puzzle_hash: Optional[bytes32]):
             console.print(f"[bold red]{message}")
             exit()
 
-        db_file = f"{Config.database_path}/{db_file_name}"
-        if not os.path.exists(db_file):
+        if not os.path.exists(db_file_name):
             message = "No database file found, please sync first"
             log.error(message)
             console.print(f"[bold red]{message}")
