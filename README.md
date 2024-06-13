@@ -56,9 +56,10 @@ Processed all blocks from 0 to 5320532
 ╰─────────────────────────────────────────────────────────────────────────────────────────────╯
 
 ❯ snapcat -f dbx.db export --json -o dbx.json
-Exporting CAT holders
+Exporting CAT holders as json
 Tail Hash: db1a9020d48d9d4ad22631b66ab4b9ebd3637ef7758ad38881348c5d24c38f20
 Last Block Height: 5320532
+Output file: dbx.json
 ```
 
 ### Show 
